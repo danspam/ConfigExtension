@@ -31,4 +31,8 @@ class ConfigExtension implements ServiceProviderInterface
             isset($app['config.replacements']) ? $app['config.replacements'] : array()
         );
     }
+    
+    public function boot(Application $app)
+    {
+    }
 }
