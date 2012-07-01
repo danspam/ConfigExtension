@@ -18,7 +18,7 @@ class ConfigExtension implements ServiceProviderInterface
     function register(\Silex\Application $app)
     {
         $app['config'] = $app->share(function () use ($app) {
-            new Config(
+            return new Config(
                 $app['config.path'],
                 isset($app['config.replacements']) ? $app['config.replacements'] : array()
             );
