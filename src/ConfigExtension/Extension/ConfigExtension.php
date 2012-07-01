@@ -32,7 +32,7 @@ class ConfigExtension implements ServiceProviderInterface
         );
     }
     
-    public function boot(Application $app)
+    public function boot(\Silex\Application $app)
     {
     }
 }
